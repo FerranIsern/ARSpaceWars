@@ -93,6 +93,10 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         // Enable canvas':
         foreach (var component in canvasComponents)
             component.enabled = true;
+
+        var cannon = GetComponentInChildren<CannonScript>();
+        cannon.active = true;
+
     }
 
 
@@ -113,6 +117,9 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         // Disable canvas':
         foreach (var component in canvasComponents)
             component.enabled = false;
+
+        var cannon = GetComponentInChildren<CannonScript>();
+        cannon.active = false;
     }
 
     #endregion // PROTECTED_METHODS
