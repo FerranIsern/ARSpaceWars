@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{E6DC51C0-F975-C338-27E2-FD53081FD88E}</ProjectGuid>
+    <ProjectGuid>{49D56856-E08D-2278-0C7D-1C34F3AD474F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -63,7 +63,9 @@
   <ItemGroup>
     <Compile Include="Assets\2 - Scripts\Bullet.cs" />
     <Compile Include="Assets\2 - Scripts\CameraFocusController.cs" />
-    <Compile Include="Assets\2 - Scripts\TankScript.cs" />
+    <Compile Include="Assets\2 - Scripts\CannonScript.cs" />
+    <Compile Include="Assets\2 - Scripts\ExplosionDestroy.cs" />
+    <Compile Include="Assets\2 - Scripts\Tank.cs" />
     <Compile Include="Assets\5 - 3D-Models\MC-1 USSR Toon Tank Big\Scripts\CameraOrbit.cs" />
     <Compile Include="Assets\5 - 3D-Models\MC-1 USSR Toon Tank Big\Scripts\SimpleControl.cs" />
     <Compile Include="Assets\Material_SpaceFight\Scripts\MarkerDetectionScript.cs" />
@@ -72,24 +74,24 @@
     <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
     <None Include="Assets\Vuforia\Shaders\CameraDiffuse.shader" />
     <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
-    <None Include="Assets\StreamingAssets\Vuforia\SpaceWars.xml" />
     <None Include="Assets\Vuforia\Shaders\OutlineOpaque.shader" />
+    <None Include="Assets\StreamingAssets\Vuforia\SpaceWars.xml" />
     <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
     <None Include="Assets\5 - 3D-Models\MC-1 USSR Toon Tank Big\README.txt" />
     <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
     <None Include="Assets\Vuforia\Shaders\DepthContour.shader" />
     <None Include="Assets\Vuforia\Shaders\Text3D.shader" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>F:/Unity Projects/SpaceShipsWars/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>F:/Unity Projects/ARSpaceWars/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>F:/Unity Projects/SpaceShipsWars/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>F:/Unity Projects/ARSpaceWars/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>F:/Unity Projects/SpaceShipsWars/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>F:/Unity Projects/ARSpaceWars/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>F:/Unity Projects/SpaceShipsWars/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>F:/Unity Projects/ARSpaceWars/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -322,7 +324,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{95AB5C6B-F818-B04E-318A-F1F004AA15DD}</Project>
+      <Project>{506C5AFE-361B-A43C-C576-B1201CADF7A3}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>
