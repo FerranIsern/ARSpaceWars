@@ -13,8 +13,10 @@ public class Bullet : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
+        transform.tag = "undefined";
         Instantiate(explosion, transform.position, explosion.transform.rotation);
-        Destroy(transform.gameObject);
+        GetComponent<AudioSource>().Play();
+        Invoke("AutoDestroy", 0.5f);
     }
     void AutoDestroy()
     {

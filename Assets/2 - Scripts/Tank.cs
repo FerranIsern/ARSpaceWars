@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Tank : MonoBehaviour {
 
+    GameController gameController;
+    public int tankIndex;
     public int hp = 10;
     public GameObject tankLife;
     public GameObject lifeBarPrefab;
-    // Use this for initialization
-
-    bool test = true;
+    public GameObject explosionPrefab;
 
 	void Start () {
-		
+        gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 	}
 
     private void OnCollisionEnter(Collision collision)
@@ -23,26 +23,11 @@ public class Tank : MonoBehaviour {
 
     void Hit()
     {
-        if (test)
-        {
-            if (tankLife.transform.childCount > 0)
-                Destroy(tankLife.transform.GetChild(0).gameObject);
-            if (tankLife.transform.childCount == 0)
-            {
-                test = false;
-                print("lost");
-            }
-        }
-        else
-        {
-            if (tankLife.transform.childCount < 10)
-                AddHealth();
-            if (tankLife.transform.childCount == 10)
-            {
-                test = true;
-                print("fullhp");
-            }
-        }
+        hp--;          
+        Destroy(tankLife.transform.GetChild(0).gameObject);
+        gameController.Hit(tankIndex);
+        if (hp == 0)
+            Explode();
     }
 
     void AddHealth()
@@ -50,8 +35,12 @@ public class Tank : MonoBehaviour {
         var newBar = Instantiate(lifeBarPrefab);
         newBar.transform.parent = tankLife.transform;
     }
-    // Update is called once per frame
-    void Update () {
-		
-	}
+
+    void Explode()
+    {
+        var explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
+        explosion.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        transform.gameObject.SetActive(false);
+    }
+
 }
