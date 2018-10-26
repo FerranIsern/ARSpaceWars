@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/ferra/Desktop/SpaceWars.apk
+C:/Users/FerranIB/Desktop/SpaceWars.apk
 SceneListBegin?
 Assets/1 - Scenes/MenuScene.unity
 Assets/1 - Scenes/GaameScene.unity

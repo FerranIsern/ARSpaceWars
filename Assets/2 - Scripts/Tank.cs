@@ -28,6 +28,16 @@ public class Tank : MonoBehaviour {
         gameController.Hit(tankIndex);
         if (hp == 0)
             Explode();
+        if (hp==3)
+        {
+            foreach (Transform child in transform)
+            {
+                if (child.name == "WhiteSmoke")
+                {
+                    child.gameObject.SetActive(true);
+                }
+            }
+        }
     }
 
     void AddHealth()

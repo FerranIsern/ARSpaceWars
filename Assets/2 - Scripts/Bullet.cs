@@ -15,8 +15,7 @@ public class Bullet : MonoBehaviour {
     {
         transform.tag = "undefined";
         Instantiate(explosion, transform.position, explosion.transform.rotation);
-        GetComponent<AudioSource>().Play();
-        Invoke("AutoDestroy", 0.5f);
+        AutoDestroy();
     }
     void AutoDestroy()
     {
